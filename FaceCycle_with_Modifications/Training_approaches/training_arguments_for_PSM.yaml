@@ -1,0 +1,38 @@
+# PSM
+# Modify the arguments to train the models of your choice
+
+
+# Path to .txt for GM and GM_wCTL containing the subfolder path to .png. For PSM, PSM_wCTL, inside that folder there should be one subfolder for each person to train.
+datapath: '../../Facial_Expression/datasets/DISFA/individual_frames_for_analysis/'
+
+# Path where to save the models. The path will expand to "savemodel/+/custom_data_loader/" and person identifier for PSM and PSM_wCTL.
+savemodel: './save_tests/' 
+
+# Choice between PSM, PSM_wCTL, GM_wCTL, GM (Original data loader from Chang et al.) to load data for that training approach.
+custom_data_loader: 'PSM' 
+
+# Choice of persons to train (list). Only used for PSM and PSM_wCTL. Inside the datapath folder, the names should match with the individual subfolders. If all, it will match with all individual subfolders.
+persons_to_train: ['SN001','SN002','SN003'] 
+
+# If used, specify path of .tar file to load
+loadmodel: 'None'
+
+# Number of training epochs
+epochs: 17
+
+# Mini batch size
+batch_size: 16 
+
+# Weights for the neutral face loss. If None we used the default in forwardloss. If list contains only 1 value, we use that for the weight and if list contains 2 values (min and max), we interpolate from min to max over training epochs. See forward loss function for more details.
+neu_face_loss_weight: 'None'
+
+# Starting learning rate for the optimization
+initial_lrate: 0.00008
+
+# Minimum learning rate for the optimization
+min_lr_to_tolerate: 0.000005
+
+# Number of workers for data loader
+num_workers: 12
+
+
