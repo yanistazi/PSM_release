@@ -87,7 +87,7 @@ It will create one subfolder per individual selected to train in the .yaml file.
 ## IV. 📚 Pretrained models:
 Pretrained models are available to download for all the training approaches (PSM, PSMwCTL, GM, GMwCTL) for all participants in the DISFA dataset.
 For PSM, there are many pretrained models to download as we effectively applied transfer learning from each participants and from VoxCeleb to each participant.
-Pretrained models can be downloaded [here] (https://www.dropbox.com/sh/8twdubx28mec0g6/AAA3a19L6y8YAeC47QhoEESMa?dl=0)
+Pretrained models can be downloaded [here](https://www.dropbox.com/sh/8twdubx28mec0g6/AAA3a19L6y8YAeC47QhoEESMa?dl=0)
 ## 📗 V. Conclusion:
 We have proposed a novel training approach for characterizing facial movements that effectively combines facial-motion cycle consistency with Person-Specific self-supervised modeling. By integrating individual differences, our approach can objectively characterize facial muscle movements without relying on human labeling. Our approach demonstrates that the model learns a representation that characterizes a fine-grained behavior specific to each person and highlights that this can not be characterized by large studies with models trained across individuals. With transfer learning, our approach is easily scalable to new persons and can generalize to new datasets. We introduced temporal curriculum learning by leveraging the temporal contiguity of the frames in a video and demonstrated that this technique helps the model learn faster.
 
