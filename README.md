@@ -39,8 +39,6 @@ The repository is structured the following way:
 │   │   ├── Training_Approaches_Expression.py <- Code for different training approaches. Used with .yaml configuration
 │   │   ├── .yaml files                       <- Different configurations 
 │   │   ├── slurm_Training_script_for_hpc.sh  <- In case you use an hpc cluster and need corresponding slurm script
-│ 
-├── PSM_environment.yml                       <- Useful to reproduce the environment with conda
 │
 ├── readme_helper.png                         <- Overview figure helper
 │
@@ -53,9 +51,15 @@ The repository is structured the following way:
 
 ### 1. Fork or clone this repository.
 
-### 2. 🔨 Create a dedicated environment as follow. The file PSM_environment.yml will automatically download the libraries that were used in this study (pytorch, etc.) and make sure cuda is compatible with the libraries for the training.
+### 2. 🔨 Create a dedicated environment as follow with the needed dependencies.
 
-**`conda env create --name <YOUR_ENV_NAME> --file=PSM_environment.yml`**
+**STEP 1:`conda create --name YOUR_ENV_NAME python=3.8 -y`**
+
+**STEP 2:`conda activate YOUR_ENV_NAME`**
+
+**STEP 3:`conda install pytorch torchvision torchaudio pytorch-cuda=YOUR_CUDA_VERSION -c pytorch -c nvidia`**
+
+**STEP 4:`pip3 install matplotlib pyyaml pandas notebook seaborn numpy tabulate colorcet`**
 
 ## 💻 III. Tutorial:
 
@@ -93,5 +97,7 @@ We have proposed a novel training approach for characterizing facial movements t
 
 In this paper, we take a step back to objectively characterize facial movements without relying on any human assumptions. By that means, we expect to discover novel behavioral clusters of facial movements. This has several important implications in a world where virtual reality, virtual social interactions, and human-robot interactions are sig- nificantly increasing (Metaverse, videoconferencing, etc.). By identifying representations of facial movements that are unique to healthy patients or unique to patients with neurological disorders, this paper opens a new route to identify biomarkers in facial movements for neurological or psychiatric diseases. This positions us to better understand neurological disorders and target neural mechanisms for improved diagnoses.
 
-## 📌 VI. Citations:
+## 💾 VI. Data availability
+The raw data is not included but was obtained from open databases: [DISFA](http://mohammadmahoor.com/disfa/) and [VoxCeleb](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/).
+## 📌 VII. Citations:
 Any use of the code or the data should cite both the associated paper and this github repository DOI.
