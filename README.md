@@ -1,6 +1,6 @@
 # Code accompanying: *Towards an objective characterization of an individual’s facial movements using Self-Supervised Person-Specific-Models*
 
- [Preprint Link]([https://www.google.com](https://arxiv.org/abs/2211.08279))
+[Preprint Link](https://www.google.com](https://arxiv.org/abs/2211.08279)
  
 ![Screenshot](readme_helper.png)
 
